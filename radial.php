@@ -18,6 +18,8 @@
 		height: 60px;
 		background-color: #ffd200;
 		border-radius: 50%;
+		text-align: center;
+		line-height: 60px;
 	}
 	.rad-menu-pop, .rad-menu-items li{
 		position: absolute;
@@ -49,15 +51,15 @@
 
 <div class="radial-menu-container">
 	<ul class="rad-menu-items clearfix">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li class="rad-menu-pop"></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li class="rad-menu-pop"><span class="fa fa-envelope-o"></span></li>
 	</ul>
 	<br clear="all"/>
 </div>
@@ -96,7 +98,9 @@ $('.rad-menu-items li').click(function(){
 			"transform" : "translate(" + randomize.direction[0] + "px, " + randomize.direction[1] + "px)",
 			"background-color" : "#" + randomize.rgb[0] + randomize.rgb[1] + randomize.rgb[2],
 			"z-index" : Math.floor(Math.random() * 100)
-		}).removeClass();
+		}).children('span')
+		  .removeClass()
+		  .addClass('fa fa-' + randomize.icon);
 		console.log("Velocity: " + randomize.velocity);
 		console.log("Coords: " + randomize.direction[0] + "x, " + randomize.direction[1] + "y");
 		console.log("rgb: " + randomize.rgb);
