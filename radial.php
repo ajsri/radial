@@ -96,11 +96,12 @@ $('.rad-menu-items li').click(function(){
 			"transform" : "translate(" + randomize.direction[0] + "px, " + randomize.direction[1] + "px)",
 			"background-color" : "#" + randomize.rgb[0] + randomize.rgb[1] + randomize.rgb[2],
 			"z-index" : Math.floor(Math.random() * 100)
-		});
+		}).removeClass();
 		console.log("Velocity: " + randomize.velocity);
 		console.log("Coords: " + randomize.direction[0] + "x, " + randomize.direction[1] + "y");
 		console.log("rgb: " + randomize.rgb);
 		console.log("icon: " + randomize.icon);
+		//testing
 
 	});
 })
