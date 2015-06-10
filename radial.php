@@ -101,14 +101,16 @@ $('.rad-menu-items li').click(function(){
 		}).children('span')
 		  .removeClass()
 		  .addClass('fa fa-' + randomize.icon);
-		console.log("Velocity: " + randomize.velocity);
-		console.log("Coords: " + randomize.direction[0] + "x, " + randomize.direction[1] + "y");
-		console.log("rgb: " + randomize.rgb);
-		console.log("icon: " + randomize.icon);
-		//testing
+		//console.log("Velocity: " + randomize.velocity);
+		// console.log("Coords: " + randomize.direction[0] + "x, " + randomize.direction[1] + "y");
+		// console.log("rgb: " + randomize.rgb);
+		// console.log("icon: " + randomize.icon);
 
 	});
 })
+setInterval(function(){
+	$('.rad-menu-items li').trigger('click');
+}, 2000);
 </script>
 </body>
 </html>
